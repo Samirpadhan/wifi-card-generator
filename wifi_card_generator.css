@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000;
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.card{
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+#qrcode{
+    margin: 0 auto 20px auto;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 100%;
+}
+
+label{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111;
+}
+
+input{
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+input:focus{
+    border-color: #00bcd4;
+    outline: none;
+}
+
+button[type="submit"],
+#downloadBtn{
+    padding: 12px;
+    background-color: #00bcff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+    width: 100%;
+}
+
+button[type="submit"]:hover,
+#downloadBtn:hover{
+    background-color: #0097a7;
+    transform: translateY(-2px);
+}
+
+#downloadBtn{
+    margin-top: 10px;
+    display: none;
+}
+
+p{
+    text-align: center;
+    color: #333;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+p::before{
+    content: "📷";
+}
+
+/* Animations */
+@keyframes fadeInDown{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:500px){
+    .card{
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+}
